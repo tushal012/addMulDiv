@@ -19,9 +19,20 @@ function mulAdd(){
         local val=$(( $a * $b + $c ))
         echo $val
 }
+function addDiv(){
+        local a=$1
+        local b=$2
+        local c=$3
+        local val=$(( $c + $a / $b ))
+        echo $val
+}
+
+
 
 
 result="$(addMul $a $b $c)"
 echo $result
 resultMul="$(mulAdd $a $b $c)"
 echo $resultMul
+resultDiv="$(addDiv $c $a $b)"
+echo $resultDiv
