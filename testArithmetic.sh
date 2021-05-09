@@ -1,4 +1,6 @@
 #! /bin/bash -x
+declare -A resultArithmetic
+
 a=10
 b=20
 c=30
@@ -46,3 +48,7 @@ echo $resultDiv
 resultPercent="$(percentAdd $a $b $c)"
 echo $resultPercent
 
+echo $result:${resultArirhmetic[$result]}
+echo $resultMul:${resultArirhmetic[$resultMul]}
+echo $resultDiv:${resultArirhmetic[$resultDiv]}
+echo $resultPercent:${resultArirhmetic[$resultPercent]}
