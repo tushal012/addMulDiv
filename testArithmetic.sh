@@ -26,6 +26,13 @@ function addDiv(){
         local val=$(( $c + $a / $b ))
         echo $val
 }
+function percentAdd(){
+        local a=$1
+        local b=$2
+        local c=$3
+        local val=$(( $a % $b + $c | bc))
+        echo $val
+}
 
 
 
@@ -36,3 +43,6 @@ resultMul="$(mulAdd $a $b $c)"
 echo $resultMul
 resultDiv="$(addDiv $c $a $b)"
 echo $resultDiv
+resultPercent="$(percentAdd $a $b $c)"
+echo $resultPercent
+
